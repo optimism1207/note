@@ -371,6 +371,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#docker_2" class="md-nav__link">
+    docker普通用户使用
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -505,6 +512,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#docker_2" class="md-nav__link">
+    docker普通用户使用
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -554,6 +568,12 @@
 <li>添加压缩文件时使用COPY</li>
 <li>使用多阶段build直接从之前的阶段拷贝编译生成的文件</li>
 </ul>
+<h2 id="docker_2">docker普通用户使用<a class="headerlink" href="#docker_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo group add docker / sudo useradd docker -s /sbin/nologin
+sudo usermod -a -G docker USER
+sudo systemctl restart docker
+sudo chmod a+rw /var/run/docker.sock
+</code></pre></div>
                 
               
               

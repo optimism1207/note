@@ -295,6 +295,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bash" class="md-nav__link">
+    bash ${}
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -437,6 +444,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bash" class="md-nav__link">
+    bash ${}
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -466,6 +480,21 @@
 
 <h2 id="_2">切换到脚本所在的目录<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code>cd $(dirname $0)
+</code></pre></div>
+
+
+<h2 id="bash">bash ${}<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>先赋值一个变量为一个路径，如下：
+file=/dir1/dir2/dir3/my.file.txt
+
+${file#*/}     拿掉第一条 / 及其左边的字符串      dir1/dir2/dir3/my.file.txt
+${file##*/}    拿掉最后一条 / 及其左边的字符串    my.file.txt
+${file#*.}     拿掉第一个 . 及其左边的字符串      file.txt
+${file##*.}    拿掉最后一个 . 及其左边的字符串    txt
+${file%/*}     拿掉最后一条 / 及其右边的字符串    /dir1/dir2/dir3
+${file%%/*}    拿掉第一条 / 及其右边的字符串      (空值)
+${file%.*}     拿掉最后一个 . 及其右边的字符串    /dir1/dir2/dir3/my.file
+${file%%.*}    拿掉第一个 . 及其右边的字符串      /dir1/dir2/dir3/my
 </code></pre></div>
                 
               
